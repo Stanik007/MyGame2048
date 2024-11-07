@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="forgame.css" />
+    <link rel="icon" href="icons/free-icon-jigsaw-993686.png" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Tiny5&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Tiny5&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>
+        <span id="header">Гра</span> <span id="void">..</span>
+        <div id="two">2</div>
+        <div id="zero">0</div>
+        <div id="four">4</div>
+        <div id="eight">8</div>
+      </h1>
+
+      <div id="footer">
+        <div id="unite">
+          <div id="home">
+            <a href="index.html"
+              ><img src="icons/free-icon-home-4211162.png" alt=""
+            /></a>
+          </div>
+          <div id="restart">
+            <a onclick="resetGame()"
+              ><img src="icons/free-icon-loading-arrow-4620220.png" alt=""
+            /></a>
+          </div>
+
+          <button id="button"><img src="icons/no-sound.png" alt="" /></button>
+        </div>
+
+        <h1 id="score"></h1>
+      </div>
+
+      <div id="game-board"></div>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="message">
+      <h2 id="change">Вітаємо! Ви перемогли! Гра завершена.</h2>
+      <h2 id="beg">Бажаєте зіграти ще раз ?</h2>
+      <div id="agree">
+        <button id="yes"><h3>Так</h3></button>
+        <button id="no"><h3>Ні</h3></button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <audio
+      id="move-sound"
+      src="sounds/zapsplat_cartoon_bubble_pop_007_40279.mp3"
+    ></audio>
+    <audio id="game-sound" src="sounds/759296__neko_4444__n4-game.wav"></audio>
+  </body>
+</html>

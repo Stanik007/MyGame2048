@@ -1,0 +1,115 @@
+body {
+  height: 95vh;
+  background-color: rgb(205, 241, 241);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+h1 div {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border: 3px solid;
+  border-color: white;
+  border-radius: 10px;
+}
+
+#void {
+  visibility: hidden;
+}
+
+#two {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#zero {
+  background-color: limegreen;
+  color: white;
+}
+
+#four {
+  background-color: tomato;
+  color: white;
+}
+
+#eight {
+  background-color: rgb(221, 207, 76);
+  color: white;
+}
+
+.first {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.second {
+  position: relative;
+  top: 6%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 3%;
+}
+
+#x35 {
+  width: 175px;
+  height: 270px;
+  transition: all 0.3s ease;
+}
+
+#x45 {
+  width: 215px;
+  height: 270px;
+  transition: all 0.3s ease;
+}
+
+.x {
+  width: 100%;
+  height: 230px;
+  transition: all 0.3s ease;
+}
+
+.box {
+  width: 650px;
+  height: 700px;
+  background-color: oldlace;
+  border: 5px solid;
+  padding: 5px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img:hover {
+  transform: scale(1.09);
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+
+.first figure {
+  text-align: center;
+}
+
+.second {
+  margin-top: -65px;
+}
+
+.second figure {
+  text-align: center;
+}
+
+figcaption h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}

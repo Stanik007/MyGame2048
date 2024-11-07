@@ -1,0 +1,237 @@
+body {
+  height: 95vh;
+  background-color: rgb(250, 205, 226);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 850px;
+  background-color: rgb(236, 135, 194);
+  margin: 0;
+  border: 5px solid;
+  border-color: white;
+  border-radius: 25px;
+}
+
+.menu {
+  font-family: "Press Start 2P", system-ui;
+  height: 200px;
+  width: 400px;
+  position: relative;
+  right: 10%;
+  margin-bottom: 11%;
+}
+
+.menu h2 {
+  display: flex;
+  align-items: center;
+}
+
+#buttons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
+}
+
+#two {
+  background-color: dodgerblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+}
+
+#zero {
+  background-color: limegreen;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+}
+
+#four {
+  background-color: tomato;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+}
+
+#eight {
+  background-color: rgb(221, 207, 76);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+}
+
+.greetings {
+  display: flex;
+  align-items: center;
+}
+
+#buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.4 ease;
+  font-family: "Press Start 2P", system-ui;
+  color: white;
+}
+
+#play {
+  background-color: rgb(224, 86, 86);
+}
+
+#rules {
+  background-color: rgb(75, 160, 75);
+}
+
+#play:hover {
+  transform: scale(1.09);
+  background-color: rgb(224, 59, 59);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+#rules:hover {
+  transform: scale(1.09);
+  background-color: rgb(21, 148, 21);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+#info {
+  visibility: hidden;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  margin-left: 22%;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  height: 560px;
+  background-color: rgb(247, 231, 231);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+#info img {
+  height: 30px;
+  width: 30px;
+}
+
+#info div h3 {
+  position: relative;
+  bottom: 19px;
+  left: 10px;
+}
+
+#info div {
+  position: relative;
+  left: 20px;
+  top: 10px;
+}
+
+#info div h1 {
+  position: relative;
+  left: 65px;
+  height: 30px;
+  font-size: 23px;
+}
+
+#aboutgame h2 {
+  font-size: 23px;
+}
+
+#up,
+#down,
+#left,
+#right {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#right {
+  height: 35px;
+}
+
+hr {
+  width: 90%;
+  border: 1px solid;
+}
+
+#want {
+  width: 400px;
+}
+
+#aboutgame {
+  display: flex;
+  width: 350px;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.manage {
+  display: flex;
+  justify-content: space-around;
+}
+
+#close {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7%;
+  height: 30px;
+  width: 30px;
+  background-color: rgb(247, 226, 111);
+  border-radius: 5px;
+  transition: all 0.4 ease;
+}
+
+#close:hover {
+  transform: scale(1.2);
+  background-color: rgb(250, 177, 68);
+  cursor: pointer;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  z-index: 1;
+}
+
+iframe {
+  width: 270px;
+  height: 150px;
+}

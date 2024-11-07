@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <link rel="icon" href="icons/free-icon-jigsaw-993686.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Tiny5&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Tiny5&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+    </style>
+  </head>
+  <body>
+    <div id="overlay"></div>
+
+    <div class="block">
+      <dotlottie-player
+        src="https://lottie.host/119faaea-42c3-4e03-b05b-50c561756644/8zW1oi3zGT.json"
+        background="transparent"
+        speed="1"
+        style="width: 600px; height: 600px"
+        loop
+        autoplay
+      ></dotlottie-player>
+
+      <div id="info">
+        <div class="manage">
+          <h1>Управління</h1>
+          <div id="close"><img src="icons/cross.png" alt="" /></div>
+        </div>
+
+        <hr />
+
+        <div id="up">
+          <img src="icons/up-arrow (1).png" alt="" />
+          <h3>: Зсув вгору</h3>
+        </div>
+        <div id="down">
+          <img src="icons/down-arrow (2).png" alt="" />
+          <h3>: Зсув вниз</h3>
+        </div>
+        <div id="left">
+          <img src="icons/left-arrow.png" alt="" />
+          <h3>: Зсув вліво</h3>
+        </div>
+        <div id="right">
+          <img src="icons/right-arrow (1).png" alt="" />
+          <h3>: Зсув вправо</h3>
+        </div>
+        <div id="aboutgame">
+          <h2>Більш детально про гру:</h2>
+          <iframe
+            width="320"
+            height="185"
+            src="https://www.youtube.com/embed/kQhkkqjGkFA?si=FhBMSRmAWEfsGTTq"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            style="border-radius: 10px; border: 5px solid #f36d1f"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="menu">
+        <h1><div class="greetings">Вітаємо вас</div></h1>
+
+        <h2 id="ingame">у грі</h2>
+
+        <h2 class="game">
+          <div id="two">2</div>
+          <div id="zero">0</div>
+          <div id="four">4</div>
+          <div id="eight">8</div>
+        </h2>
+
+        <h2 id="want">Бажаєте зіграти?</h2>
+        <div id="buttons">
+          <div>
+            <a href="main.html"
+              ><button id="play"><h3>Грати</h3></button></a
+            >
+          </div>
+          <div>
+            <button id="rules"><h3>Правила гри</h3></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script>
+      let hint = document.getElementById("info");
+      let overlay = document.getElementById("overlay");
+      document.getElementById("rules").addEventListener("click", function () {
+        hint.style.visibility = "visible";
+        overlay.style.visibility = "visible";
+      });
+
+      document.getElementById("close").addEventListener("click", function () {
+        hint.style.visibility = "hidden";
+        overlay.style.visibility = "hidden";
+      });
+    </script>
+    </script>
+  </body>
+</html>
