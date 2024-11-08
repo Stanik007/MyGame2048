@@ -2,6 +2,7 @@ body {
   height: 95vh;
   background-color: rgb(250, 205, 226);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -234,4 +235,164 @@ hr {
 iframe {
   width: 270px;
   height: 150px;
+}
+
+@media (max-width: 1200px) {
+  .block {
+    height: 450px;
+    width: 700px;
+  }
+  .greetings {
+    font-size: 20px;
+  }
+
+  #ingame,
+  #want {
+    font-size: 20px;
+  }
+
+  #want {
+    width: 320px;
+  }
+
+  #two,
+  #zero,
+  #four,
+  #eight {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  #buttons button {
+    width: 115px;
+    height: 40px;
+    font-size: 10px;
+  }
+
+  #info {
+    width: 290px;
+    height: 430px;
+    margin-left: 380px;
+  }
+
+  #info img {
+    height: 25px;
+    width: 25px;
+    margin-top: -4px;
+  }
+
+  #info div h1 {
+    font-size: 18px;
+    margin-right: 45px;
+  }
+
+  #info div h3 {
+    font-size: 16px;
+  }
+
+  #aboutgame h2 {
+    font-size: 16px;
+  }
+
+  #close {
+    margin-right: 14%;
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+  }
+
+  iframe {
+    width: 170px;
+    height: 80px;
+  }
+
+  .menu {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .block {
+    height: 350px;
+    width: 600px;
+  }
+  .greetings {
+    font-size: 17px;
+  }
+
+  #ingame,
+  #want {
+    font-size: 17px;
+  }
+
+  #want {
+    width: 280px;
+  }
+
+  #two,
+  #zero,
+  #four,
+  #eight {
+    width: 25px;
+    height: 25px;
+    font-size: 13px;
+  }
+
+  #buttons button {
+    width: 105px;
+    height: 30px;
+    font-size: 9px;
+    border-radius: 5px;
+  }
+
+  .menu {
+    margin-top: 50px;
+  }
+
+  #info {
+    width: 290px;
+    height: 330px;
+    margin-left: 280px;
+  }
+
+  #up,
+  #down,
+  #left,
+  #rigth {
+    margin-top: 20px;
+    height: 35px;
+  }
+
+  #left {
+    height: 55px;
+  }
+
+  #info img {
+    height: 20px;
+    width: 20px;
+    margin-top: -5px;
+  }
+
+  #info div h1 {
+    font-size: 16px;
+
+    margin-right: 40px;
+  }
+
+  #info div h3 {
+    font-size: 14px;
+  }
+
+  #aboutgame h2 {
+    display: none;
+  }
+
+  .manage {
+    margin-top: -10px;
+  }
+
+  iframe {
+    display: none;
+  }
 }
