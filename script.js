@@ -5,6 +5,7 @@ const functionality = urlParams.get("functionality");
 let message = document.getElementById("message");
 const overlay = document.getElementById("overlay");
 
+
 if (functionality === "option1") {
   row = 4;
   col = 4;
@@ -50,19 +51,21 @@ function playMoveSound() {
 
 function changeButtonAndSound() {
   let button = document.getElementById("button");
-  let sound = document.getElementById("game-sound");
   let isMuted = true;
 
   button.addEventListener("click", function () {
+    let sound = document.getElementById("game-sound");
     if (isMuted) {
       button.querySelector("img").src = "icons/unmute.png";
       sound.play();
       isMuted = false;
-    } else {
+    } 
+    else {
       button.querySelector("img").src = "icons/no-sound.png";
       sound.pause();
       isMuted = true;
     }
+
   });
 }
 
@@ -129,47 +132,42 @@ function CountSpaces(board) {
 
 function GameOver(board) {
   let text = document.getElementById("change");
+  let win = document.getElementById("win-sound");
+  let lose = document.getElementById("lose-sound");
+  let gameSound = document.getElementById("game-sound"); 
+
   for (let i = 0; i < row; i++) {
     for (let j = 0; j < col; j++) {
-      if (board[i][j] === 2048) {
-        document.addEventListener("keydown", function (event) {
-          const forbiddenKeys = [
-            "ArrowUp",
-            "ArrowLeft",
-            "ArrowRight",
-            "ArrowDown",
-          ];
-          if (forbiddenKeys.includes(event.key)) {
-            event.preventDefault();
-          }
-        });
+      if (board[i][j] === 2048) { 
         message.style.visibility = "visible";
         overlay.style.visibility = "visible";
-        while (generate.length !== 1) {
-          generate.shift();
-        }
+        
+        win.play();
+        gameSound.pause(); 
+        gameSound.currentTime = 0; 
+
         score = 0;
+        return true;
       }
     }
   }
 
   let count = CountSpaces(board);
-  if (count < 2) {
-    document.addEventListener("keydown", function (event) {
-      const forbiddenKeys = ["ArrowUp", "ArrowLeft", "ArrowRight", "ArrowDown"];
-      if (forbiddenKeys.includes(event.key)) {
-        event.preventDefault();
-      }
-    });
-    while (generate.length !== 1) {
-      generate.shift();
-    }
-    score = 0;
-    text.textContent = "На жаль ви програли! Гра завершена.";
+  if (count < 2) { 
     message.style.visibility = "visible";
     overlay.style.visibility = "visible";
+
+    lose.play();
+    gameSound.pause(); 
+    gameSound.currentTime = 0; 
+
+    score = 0;
+    text.textContent = "На жаль ви програли! Гра завершена.";
+    return true;
   }
+  return false;
 }
+
 
 function moveLeft(board) {
   for (let i = 0; i < row; i++) {
