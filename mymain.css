@@ -113,3 +113,77 @@ figcaption h3 {
   font-weight: bold;
   text-align: center;
 }
+
+@media (max-width: 1200px) {
+  h1 div {
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  #x35 {
+    width: 155px;
+    height: 250px;
+  }
+
+  #x45 {
+    width: 175px;
+    height: 250px;
+  }
+
+  .x {
+    width: 200px;
+    height: 200px;
+  }
+
+  .box {
+    width: 550px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 1000px) {
+  h1 div {
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  #x35 {
+    width: 125px;
+    height: 170px;
+  }
+
+  #x45 {
+    width: 145px;
+    height: 170px;
+  }
+
+  .second {
+    margin-left: 12px;
+    gap: 22px;
+  }
+
+  .first {
+    margin-right: 5px;
+  }
+
+  .x {
+    width: 160px;
+    height: 160px;
+  }
+
+  .box {
+    width: 470px;
+    height: 500px;
+    border: 4px solid;
+  }
+}
